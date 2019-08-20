@@ -13,12 +13,12 @@
 </template>
 
 <script>
-  export default {
-  name: 'EmployeeTable',
+export default {
+  name: "EmployeeTable",
   props: {
-    employees: Array,
-  },
-}
+    employees: Array
+  }
+};
 </script>
 
 <style scoped></style>

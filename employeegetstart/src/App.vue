@@ -3,22 +3,18 @@
     <h1>Employees</h1>
     <employee-form @add:employee="addEmployee" />
     <employee-table v-bind:employees="employees" />
-    </div>
-
-
+  </div>
 </template>
 
 <script>
 import EmployeeTable from "@/components/EmployeeTable.vue";
 import EmployeeForm from "@/components/EmployeeForm.vue";
 
-
-
 export default {
   name: "app",
   components: {
     EmployeeTable,
-    EmployeeForm,
+    EmployeeForm
   },
   data() {
     return {
@@ -40,22 +36,20 @@ export default {
         }
       ]
     };
-  },methods: {
-  addEmployee(employee) {
-     const lastId =
-    this.employees.length > 0
-      ? this.employees[this.employees.length - 1].id
-      : 0;
-    const id = lastId + 1;
-    const newEmployee = { ...employee, id };
+  },
+  methods: {
+    addEmployee(employee) {
+      const lastId =
+        this.employees.length > 0
+          ? this.employees[this.employees.length - 1].id
+          : 0;
+      const id = lastId + 1;
+      const newEmployee = { ...employee, id };
 
-    this.employees = [...this.employees, newEmployee];
+      this.employees = [...this.employees, newEmployee];
+    }
   }
-}
-  
-
 };
-
 </script>
 
 <style>
