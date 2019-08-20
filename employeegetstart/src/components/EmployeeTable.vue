@@ -14,7 +14,7 @@
 
 <script>
   export default {
-  name: 'employee-table',
+  name: 'EmployeeTable',
   props: {
     employees: Array,
   },
