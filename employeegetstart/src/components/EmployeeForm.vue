@@ -16,14 +16,16 @@
   data() {
     return {
         employee: {
-        name: '',
-        email: '',
-      },
-    }
+            name: '',
+            email: '',
+        },
+    }  
   },
   methods: {
     handleSubmit() {
         this.$emit('add:employee', this.employee)
+        this.employee.name = ''
+        this.employee.email = ''
     },
   },
 }
